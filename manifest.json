@@ -1,14 +1,14 @@
 {
-  "name": "Bits",
+  "name": "Google-Search-Box-Syntax",
   "version": "0.1.1",
-  "description": "Bits",
+  "description": "Google-Search-Box-Syntax",
   "manifest_version": 2,
-  "background": {
-    "scripts": ["./background/background.js"],
-    "persistent": false
-  },
-  "browser_action": {
-    "default_icon": "./images/bits.png"
-  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/"],
+      "css": ["myStyles.css"],
+      "js": ["contentScript.js"]
+    }
+  ],
   "permissions": ["activeTab"]
 }
