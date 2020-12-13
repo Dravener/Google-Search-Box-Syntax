@@ -4,3 +4,9 @@
   margin-right: auto;
   text-align: center;
 }
+
+.hakuna-btn {
+  height: 30px;
+  border-radius: 4px;
+  margin-top: 50px;
+}

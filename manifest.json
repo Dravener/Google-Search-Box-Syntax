@@ -5,10 +5,13 @@
   "manifest_version": 2,
   "content_scripts": [
     {
-      "matches": ["https://www.google.com/"],
+      "matches": ["https://www.google.com/*"],
       "css": ["myStyles.css"],
       "js": ["contentScript.js"]
     }
   ],
-  "permissions": ["activeTab"]
+  "permissions": ["activeTab"],
+  "web_accessible_resources": [
+    "hakunamatata.txt"
+  ]
 }
