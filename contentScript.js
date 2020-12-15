@@ -31,7 +31,6 @@ hakunaBtn.addEventListener('click', () => {
               textR += ` ${word}`
             }
           })
-          console.log(textR)
           searchBox[0].value = textR
         }
       })
