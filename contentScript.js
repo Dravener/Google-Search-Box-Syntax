@@ -17,5 +17,23 @@ const hakunaBtn = document.getElementById('hakuna')
 hakunaBtn.addEventListener('click', () => {
   fetch(url)
     .then(response => response.text())
-    .then(text => searchBox[0].value = text)
+    .then(text => {
+      let sents = text.split('\n')
+      sents.forEach(sent => {
+        if (sent.charAt(0).match(/[A-Z]/i) && sent.charAt(0) == sent.charAt(0).toUpperCase()) {
+          let textR = ''
+          const words = sent.split(' ')
+          words.forEach(word => {
+            if (word.charAt(0) == word.charAt(0).toUpperCase()) {
+              word = `"${word}"`
+              textR += ` ${word}`
+            } else {
+              textR += ` ${word}`
+            }
+          })
+          console.log(textR)
+          searchBox[0].value = textR
+        }
+      })
+    })
 })
